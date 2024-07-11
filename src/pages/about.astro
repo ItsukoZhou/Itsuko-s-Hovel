@@ -1,38 +1,47 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
-
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-
-
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
->
-	<img src="/blog-placeholder-about.png" alt="An Image" >
-	<p>
-		<ul>
-			<li>
-				NAME: Itsuko Zhou
-			</li>
-			<li>
-				Twitter: @ItsukoZhou
-			</li>
-			<li>
-				Github: ItsukoZhou
-			</li>
-			</li>
-		</ul>
-	</p>
-	<p>
-		<h5>
-			"I curse my stars in bitter grief and woe,
-		</h5>
-		<h5>
-			that made my love so high and me so low."
-		</h5>
-	</p>
-
-</Layout>
-
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>
+				About Me
+			</h1>
+			<img src="/blog-placeholder-about.png" alt="An Image" >
+			<p>
+				<ul>
+					<li>
+						NAME: Itsuko Zhou
+					</li>
+					<li>
+						Twitter: @ItsukoZhou
+					</li>
+					<li>
+						Github: ItsukoZhou
+					</li>
+					<li>
+						Mail: itsukko@foxmail.com
+					</li>
+				</ul>
+			</p>
+			<p>
+				<h5>
+					"I curse my stars in bitter grief and woe,
+				</h5>
+				<h5>
+					that made my love so high and me so low."
+				</h5>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
